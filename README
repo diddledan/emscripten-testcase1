@@ -1,0 +1,15 @@
+= How to run the testcase =
+
+`
+emconfigure ./configure
+emmake make
+
+mv testcase testcase.bc
+emcc testcase.bc -o testcase.js
+
+node testcase.js
+`
+
+it will either report "TEST FAILED" with a description of the error or "test passed".
+
+A failure will exit with exitcode 1 and a pass will exit with an exitcode of 0
